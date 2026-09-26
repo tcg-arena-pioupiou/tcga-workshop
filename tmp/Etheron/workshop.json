@@ -1,0 +1,11 @@
+{
+    "author": "Etheron",
+    "gameUrl": "https://slootq.github.io/Etheron-TCG-Arena/Etheron-Game.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://jmtpscczqicugeqvticd.supabase.co/storage/v1/object/public/TCG%20ARENA/Backgrounds/PM_yldan-vs-neeska-c.webp"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "author": "TMac",
+    "gameUrl": "https://tmacaroni.github.io/NarutoTCG/Game_Naruto%20TCG.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://tmacaroni.github.io/NarutoTCG/background.webp"
+    ]
+}

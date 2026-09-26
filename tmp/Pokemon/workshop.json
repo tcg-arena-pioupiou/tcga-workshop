@@ -1,0 +1,11 @@
+{
+    "author": "PiouPiou",
+    "gameUrl": "https://valcur.github.io/TCG-Arena-Pokemon/Game_Pokemon.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://valcur.github.io/TCG-Arena-Pokemon/Images/1.jpg"
+    ]
+}

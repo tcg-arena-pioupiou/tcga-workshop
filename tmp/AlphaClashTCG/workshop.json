@@ -1,0 +1,11 @@
+{
+    "author": "TheMrFrick",
+    "gameUrl": "https://themrfrick.github.io/Alpha-Clash-TCGArena/game.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://themrfrick.github.io/Alpha-Clash-TCGArena/images/backgrounds/alpha_clash_background_image.jpg"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "author": "Clark",
+    "gameUrl": "https://padamsonclark.github.io/AzukiTCG/Game_AzukiTCG.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://padamsonclark.github.io/AzukiTCG/Images/background.jpg"
+    ]
+}

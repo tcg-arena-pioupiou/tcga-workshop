@@ -24,7 +24,7 @@ Put it anywhere online, ideally in the same folder as your game file. Copy this 
 |---|---|---|
 | `author` | yes | The name displayed as the game's author. |
 | `gameUrl` | yes | Link to your game file. Can be just the file name if it's in the same folder. |
-| `tags` | yes | Words people can search for, separated by commas (max 200 characters). Use `""` if none. |
+| `tags` | no | Words people can search for, separated by commas (max 200 characters). |
 | `langs` | yes | Languages of your game, ex: `["en", "fr"]`. |
 | `useAiArts` | yes | `true` or `false` (no quotes). |
 | `contact.discord` | no | Your Discord name, so we can reach you if something breaks. |

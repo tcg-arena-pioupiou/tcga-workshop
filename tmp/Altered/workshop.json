@@ -1,0 +1,12 @@
+{
+    "author": "PiouPiou",
+    "gameUrl": "https://valcur.github.io/TCG-Arena-Altered/Game_Altered.json",
+    "langs": [
+        "en",
+        "fr"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://valcur.github.io/TCG-Arena-Altered/Images/background.jpeg"
+    ]
+}

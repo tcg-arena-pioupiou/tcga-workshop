@@ -1,0 +1,11 @@
+{
+    "author": "Balbi",
+    "gameUrl": "https://balbi.github.io/TCG-Arena-Palworld/Game_Palworld.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://balbi.github.io/TCG-Arena-Palworld/images/banner.png"
+    ]
+}

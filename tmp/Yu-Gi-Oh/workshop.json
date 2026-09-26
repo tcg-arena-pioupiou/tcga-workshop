@@ -1,0 +1,11 @@
+{
+    "author": "PiouPiou",
+    "gameUrl": "https://valcur.github.io/TCG-Arena-Yugioh/Game_Yu-Gi-Oh.json",
+    "langs": [
+        "en"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://valcur.github.io/TCG-Arena-Yugioh/Images/banner.jpg"
+    ]
+}

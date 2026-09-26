@@ -1,138 +1,138 @@
 [
     {
         "name": "Magic the Gathering",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-MTG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/workshop.json"
     },
     {
         "name": "Lorcana",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Lorcana/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Lorcana/workshop.json"
     },
     {
         "name": "Star Wars Unlimited",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-SWU/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/StarWarsUnlimited/workshop.json"
     },
     {
         "name": "Riftbound",
-        "workshopUrl": "https://russeus.github.io/RB-TCG-Arena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Riftbound/workshop.json"
     },
     {
         "name": "Cyberpunk TCG",
-        "workshopUrl": "https://russeus.github.io/CyberpunkTCG-TCGA/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/CyberpunkTCG/workshop.json"
     },
     {
         "name": "Altered",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Altered/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Altered/workshop.json"
     },
     {
         "name": "Pokemon",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Pokemon/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Pokemon/workshop.json"
     },
     {
         "name": "Yu-Gi-Oh",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Yugioh/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Yu-Gi-Oh/workshop.json"
     },
     {
         "name": "Gundam Card Game",
-        "workshopUrl": "https://jjcodes78.github.io/GundamTCG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/GundamCardGame/workshop.json"
     },
     {
         "name": "Godzilla Card Game",
-        "workshopUrl": "https://jjcodes78.github.io/GodzillaTCG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/GodzillaCardGame/workshop.json"
     },
     {
         "name": "Dragon Ball Super Fusion World",
-        "workshopUrl": "https://nichobrando.github.io/Dragon-Ball-Fusion-Arena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/DragonBallSuperFusionWorld/workshop.json"
     },
     {
         "name": "Shadowverse Evolve",
-        "workshopUrl": "https://dfhgss.github.io/TCG-Arena-SVE/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/ShadowverseEvolve/workshop.json"
     },
     {
         "name": "CookieRun Braverse",
-        "workshopUrl": "https://jarin55.github.io/TCG-Arena-CRB/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/CookieRunBraverse/workshop.json"
     },
     {
         "name": "Etheron",
-        "workshopUrl": "https://slootq.github.io/Etheron-TCG-Arena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Etheron/workshop.json"
     },
     {
         "name": "Force of Will",
-        "workshopUrl": "https://niebvelungen.github.io/TCG-Arena-FoW/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/ForceofWill/workshop.json"
     },
     {
         "name": "Dragon Ball Super Card Game Masters",
-        "workshopUrl": "https://vitorjcorreia.github.io/Dragon-Ball-Masters-Arena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/DragonBallSuperCardGameMasters/workshop.json"
     },
     {
         "name": "Alpha Clash TCG",
-        "workshopUrl": "https://themrfrick.github.io/Alpha-Clash-TCGArena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/AlphaClashTCG/workshop.json"
     },
     {
         "name": "Speed Basketball TCG",
-        "workshopUrl": "https://sidseverino.github.io/speedtcg/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/SpeedBasketballTCG/workshop.json"
     },
     {
         "name": "Azuki TCG",
-        "workshopUrl": "https://padamsonclark.github.io/AzukiTCG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/AzukiTCG/workshop.json"
     },
     {
         "name": "Cryptid Camp",
-        "workshopUrl": "https://res.cloudinary.com/dmt0sv1yi/raw/upload/v1773684197/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/CryptidCamp/workshop.json"
     },
     {
         "name": "Palworld OCG",
-        "workshopUrl": "https://balbi.github.io/TCG-Arena-Palworld/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/PalworldOCG/workshop.json"
     },
     {
         "name": "Echoes of Astra",
-        "workshopUrl": "https://tmacaroni.github.io/echoesofastra/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/EchoesofAstra/workshop.json"
     },
     {
         "name": "Escape Land CCG",
-        "workshopUrl": "https://anafrodragon.github.io/EscapeLandTCGArena/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/EscapeLandCCG/workshop.json"
     },
     {
         "name": "Vampire The Eternal Struggle",
-        "workshopUrl": "https://raykwashington.github.io/TCG-Arena-VTES/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/VampireTheEternalStruggle/workshop.json"
     },
     {
         "name": "My Little Pony",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-MLP/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MyLittlePony/workshop.json"
     },
     {
         "name": "Digimon",
-        "workshopUrl": "https://raykwashington.github.io/TCG-Arena-DigimonTCG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Digimon/workshop.json"
     },
     {
         "name": "Rift Runners TCG",
-        "workshopUrl": "https://balbi.github.io/TCGA-Rift-Runners/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/RiftRunnersTCG/workshop.json"
     },
     {
         "name": "Cataclysm Arcade",
-        "workshopUrl": "https://balbi.github.io/TCGA-Cataclysm-Arcade/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/CataclysmArcade/workshop.json"
     },
     {
         "name": "Vibes",
-        "workshopUrl": "https://sirvibesalot.github.io/TCG-Arena-Vibes/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Vibes/workshop.json"
     },
     {
         "name": "Hellbreak",
-        "workshopUrl": "https://russeus.github.io/Hellbreak-TCGA/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Hellbreak/workshop.json"
     },
     {
         "name": "Battletech",
-        "workshopUrl": "https://raw.githubusercontent.com/Nathan-Culver/TCG-Arena-BT/main/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Battletech/workshop.json"
     },
     {
         "name": "Naruto TCG",
-        "workshopUrl": "https://tmacaroni.github.io/NarutoTCG/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/NarutoTCG/workshop.json"
     },
     {
         "name": "Marvel Champions",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Marvel-Champions/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MarvelChampions/workshop.json"
     },
     {
         "name": "Classic",
-        "workshopUrl": "https://valcur.github.io/TCG-Arena-Classic/workshop.json"
+        "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Classic/workshop.json"
     }
 ]

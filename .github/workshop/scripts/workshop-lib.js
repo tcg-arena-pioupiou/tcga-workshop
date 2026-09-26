@@ -120,11 +120,6 @@ function validateWorkshop(ws) {
     if (!isNonEmptyString(ws.author)) errors.push(`"author" is missing or empty`);
     if (!isNonEmptyString(ws.gameUrl)) errors.push(`"gameUrl" is missing or empty`);
 
-    if (typeof ws.tags !== "string") {
-        errors.push(`"tags" is missing (use "" if you have no tags)`);
-    } else if (ws.tags.length > MAX_TAGS_LENGTH) {
-        errors.push(`"tags" is too long (${ws.tags.length} characters, max ${MAX_TAGS_LENGTH})`);
-    }
 
     if (!Array.isArray(ws.langs) || ws.langs.length === 0 || !ws.langs.every(isNonEmptyString)) {
         errors.push(`"langs" must be a list with at least one language, ex: ["en"]`);
@@ -135,6 +130,13 @@ function validateWorkshop(ws) {
     }
 
     // Optionnels
+    if (ws.tags !== undefined) {
+        if (typeof ws.tags !== "string") {
+            errors.push(`"tags" must be a text, ex: "tcg,fantasy"`);
+        } else if (ws.tags.length > MAX_TAGS_LENGTH) {
+            errors.push(`"tags" is too long (${ws.tags.length} characters, max ${MAX_TAGS_LENGTH})`);
+        }
+    }
     if (ws.contact !== undefined) {
         if (ws.contact === null || typeof ws.contact !== "object" || Array.isArray(ws.contact)) {
             errors.push(`"contact" must be an object, ex: { "discord": "mypseudo" }`);
@@ -192,7 +194,7 @@ async function loadGame(workshopUrl) {
         workshopUrl,
         gameUrl,
         imageUrl,
-        tags: ws.tags,
+        tags: ws.tags ?? "",
         langs: ws.langs.map((l) => l.trim().toLowerCase()),
         useAiArts: ws.useAiArts,
         screenshotUrls,
