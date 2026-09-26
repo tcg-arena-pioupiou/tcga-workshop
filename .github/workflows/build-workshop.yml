@@ -18,9 +18,6 @@ concurrency:
   group: build-workshop
   cancel-in-progress: false
 
-env:
-  DATA_BRANCH: workshop-data
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,32 +28,19 @@ jobs:
         with:
           node-version: "20"
 
-      # Les fichiers générés vivent sur une branche séparée, extraite dans publish/.
-      # La branche est créée automatiquement au premier passage.
-      - name: Prepare data branch
-        run: |
-          if git ls-remote --exit-code --heads origin "$DATA_BRANCH" > /dev/null; then
-            git fetch --depth=1 origin "$DATA_BRANCH"
-            git worktree add --detach publish FETCH_HEAD
-          else
-            git worktree add --detach publish
-            cd publish
-            git checkout --orphan "$DATA_BRANCH"
-            git rm -rf --quiet .
-          fi
-
       - name: Build games.json
         run: node .github/workshop/scripts/build-workshop.js
 
-      - name: Publish if something changed
-        working-directory: publish
+      - name: Commit on main if something changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add .github/workshop/data/
           if git diff --cached --quiet; then
             echo "No change."
           else
             git commit -m "Workshop update $(date -u +%Y-%m-%d)"
-            git push origin "HEAD:$DATA_BRANCH"
+            # Récupère un éventuel commit fait pendant le build avant de pousser
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
