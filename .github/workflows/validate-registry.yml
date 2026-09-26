@@ -1,0 +1,84 @@
+name: Validate registry PR
+
+# pull_request_target : nécessaire pour pouvoir commenter les PR venant de forks.
+# SÉCURITÉ : on exécute uniquement les scripts de la branche principale.
+# Le registry.json de la PR est lu comme une simple donnée, jamais exécuté.
+# Ne jamais faire de checkout du code de la PR dans ce workflow.
+# Pas de filtre "paths" : on veut aussi repérer les PR qui touchent d'autres fichiers.
+on:
+  pull_request_target:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  DATA_BRANCH: workshop-data
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch (trusted scripts)
+        uses: actions/checkout@v4
+
+      - name: Check which files the PR changes
+        id: files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          OTHER=$(gh pr diff "$PR" --repo "$REPO" --name-only | grep -vx "registry.json" || true)
+          if [ -n "$OTHER" ]; then
+            {
+              echo "### ❌ Only registry.json can be changed"
+              echo "This pull request also changes:"
+              echo "$OTHER" | sed 's/^/- `/; s/$/`/'
+              echo ""
+              echo "Please only add your game to \`registry.json\`."
+            } > "$RUNNER_TEMP/comment.md"
+            echo "blocked=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Get registry.json from the PR and state.json from the data branch (as data only)
+        if: steps.files.outputs.blocked != 'true'
+        run: |
+          git fetch --no-tags --depth=1 origin "pull/${{ github.event.pull_request.number }}/head:pr-head"
+          git show pr-head:registry.json > "$RUNNER_TEMP/pr-registry.json" || echo "" > "$RUNNER_TEMP/pr-registry.json"
+          if git fetch --no-tags --depth=1 origin "$DATA_BRANCH" 2> /dev/null; then
+            git show FETCH_HEAD:state.json > "$RUNNER_TEMP/state.json" || echo "{}" > "$RUNNER_TEMP/state.json"
+          else
+            echo "{}" > "$RUNNER_TEMP/state.json"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.files.outputs.blocked != 'true'
+        with:
+          node-version: "20"
+
+      - name: Validate
+        if: steps.files.outputs.blocked != 'true'
+        env:
+          PR_REGISTRY_PATH: ${{ runner.temp }}/pr-registry.json
+          STATE_FILE: ${{ runner.temp }}/state.json
+          COMMENT_FILE: ${{ runner.temp }}/comment.md
+        run: node .github/workshop/scripts/validate-registry.js
+
+      - name: Comment on the PR
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          BODY: ${{ runner.temp }}/comment.md
+        run: |
+          if [ -f "$BODY" ]; then
+            # Met à jour le commentaire précédent s'il existe, sinon en crée un
+            gh pr comment "$PR" --repo "$REPO" --body-file "$BODY" --edit-last \
+              || gh pr comment "$PR" --repo "$REPO" --body-file "$BODY"
+          fi
+
+      - name: Fail if blocked
+        if: steps.files.outputs.blocked == 'true'
+        run: exit 1

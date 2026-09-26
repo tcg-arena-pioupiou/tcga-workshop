@@ -1,0 +1,22 @@
+{
+    "author": "PiouPiou",
+    "contact": { "discord": "pioupiou" },
+    "gameUrl": "Game.json",
+    "tags": "tcg,fantasy,coop",
+    "langs": ["en", "fr"],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "screenshots/1.png",
+        "screenshots/2.png"
+    ],
+    "descriptionUrl": "description.md",
+    "updates": [
+        "Added the new expansion and fixed the resource counter.",
+        [
+            "Big update:",
+            "- New deck builder filters",
+            "- Faster card loading"
+        ],
+        "First release!"
+    ]
+}

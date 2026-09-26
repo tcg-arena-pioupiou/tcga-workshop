@@ -1,0 +1,104 @@
+{
+    "Magic the Gathering": {
+        "popularity": 1000
+    },
+    "Lorcana": {
+        "popularity": 959
+    },
+    "Star Wars Unlimited": {
+        "popularity": 938
+    },
+    "Riftbound": {
+        "popularity": 897
+    },
+    "Cyberpunk TCG": {
+        "popularity": 876
+    },
+    "Altered": {
+        "popularity": 855
+    },
+    "Pokemon": {
+        "popularity": 814
+    },
+    "Yu-Gi-Oh": {
+        "popularity": 793
+    },
+    "Gundam Card Game": {
+        "popularity": 772
+    },
+    "Godzilla Card Game": {
+        "popularity": 731
+    },
+    "Dragon Ball Super Fusion World": {
+        "popularity": 710
+    },
+    "Shadowverse Evolve": {
+        "popularity": 689
+    },
+    "CookieRun Braverse": {
+        "popularity": 648
+    },
+    "Etheron": {
+        "popularity": 627
+    },
+    "Force of Will": {
+        "popularity": 606
+    },
+    "Dragon Ball Super Card Game Masters": {
+        "popularity": 565
+    },
+    "Alpha Clash TCG": {
+        "popularity": 544
+    },
+    "Speed Basketball TCG": {
+        "popularity": 523
+    },
+    "Azuki TCG": {
+        "popularity": 482
+    },
+    "Cryptid Camp": {
+        "popularity": 461
+    },
+    "Palworld OCG": {
+        "popularity": 440
+    },
+    "Echoes of Astra": {
+        "popularity": 399
+    },
+    "Escape Land CCG": {
+        "popularity": 378
+    },
+    "Vampire The Eternal Struggle": {
+        "popularity": 337
+    },
+    "My Little Pony": {
+        "popularity": 316
+    },
+    "Digimon": {
+        "popularity": 295
+    },
+    "Rift Runners TCG": {
+        "popularity": 254
+    },
+    "Cataclysm Arcade": {
+        "popularity": 233
+    },
+    "Vibes": {
+        "popularity": 212
+    },
+    "Hellbreak": {
+        "popularity": 171
+    },
+    "Battletech": {
+        "popularity": 150
+    },
+    "Naruto TCG": {
+        "popularity": 129
+    },
+    "Marvel Champions": {
+        "popularity": 88
+    },
+    "Classic": {
+        "popularity": 67
+    }
+}
