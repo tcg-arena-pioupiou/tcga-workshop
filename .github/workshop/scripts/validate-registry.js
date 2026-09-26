@@ -4,7 +4,7 @@ const fs = require("fs");
 const { loadGame, isNonEmptyString } = require("./workshop-lib");
 
 const BASE_REGISTRY_FILE = process.env.BASE_REGISTRY_FILE || "registry.json";
-const STATE_FILE = process.env.STATE_FILE || ".github/workshop/data/state.json";
+const STATE_FILE = process.env.STATE_FILE || "workshop-data/state.json";
 const PR_REGISTRY_FILE = process.env.PR_REGISTRY_PATH;
 const COMMENT_FILE = process.env.COMMENT_FILE;
 

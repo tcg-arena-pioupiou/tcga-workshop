@@ -4,7 +4,7 @@ Every game on the workshop is described by a small `workshop.json` file that **y
 
 ## 1. Create your `workshop.json`
 
-Put it anywhere online, ideally in the same folder as your game file. Copy this and fill it in (full example in [`.github/workshop/examples`](.github/workshop/examples)):
+Put it anywhere online, ideally in the same folder as your game file. Copy this and fill it in (full example in [`examples`](examples)):
 
 ```json
 {

@@ -7,8 +7,8 @@ const { loadGame, mapWithLimit } = require("./workshop-lib");
 // Chemins relatifs à la racine du repo (surchargeables par variables d'environnement)
 const REGISTRY_FILE = process.env.REGISTRY_FILE || "registry.json";
 const OVERRIDES_FILE = process.env.OVERRIDES_FILE || ".github/workshop/overrides.json";
-const STATE_FILE = process.env.STATE_FILE || ".github/workshop/data/state.json";   // hash, dates, dernière version valide
-const OUTPUT_FILE = process.env.OUTPUT_FILE || ".github/workshop/data/games.json"; // fichier public lu par le site
+const STATE_FILE = process.env.STATE_FILE || "workshop-data/state.json";   // hash, dates, dernière version valide
+const OUTPUT_FILE = process.env.OUTPUT_FILE || "workshop-data/games.json"; // fichier public lu par le site
 const CONCURRENCY = 5;
 
 function readJson(file, fallback) {
