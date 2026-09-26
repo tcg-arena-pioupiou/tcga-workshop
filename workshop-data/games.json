@@ -1,1 +1,31 @@
-[]
+[
+    {
+        "name": "Lorcana",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Lorcana/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-Lorcana/Game_Lorcana.json",
+        "imageUrl": "https://i.ibb.co/zVvkhS96/F3x-Rtyu-Xo-AAGE17.webp",
+        "tags": "tcg,fantasy,coop",
+        "langs": [
+            "en",
+            "fr"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-Lorcana/screenshots/1.png",
+            "https://valcur.github.io/TCG-Arena-Lorcana/screenshots/2.png"
+        ],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-Lorcana/description.md",
+        "contact": {
+            "discord": "pioupiou"
+        },
+        "updates": [
+            "Added the new expansion and fixed the resource counter.",
+            "Big update:\n- New deck builder filters\n- Faster card loading",
+            "First release!"
+        ],
+        "createdAt": "2026-09-26",
+        "lastUpdated": "2026-09-26",
+        "popularity": 959
+    }
+]
