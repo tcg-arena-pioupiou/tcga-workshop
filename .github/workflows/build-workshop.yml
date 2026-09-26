@@ -1,0 +1,62 @@
+name: Build workshop
+
+on:
+  schedule:
+    - cron: "0 4 * * *"      # tous les jours à 4h UTC
+  workflow_dispatch:          # bouton "Run workflow" dans l'onglet Actions
+  push:
+    branches: [main]
+    paths:                    # immédiat quand tu merges un jeu ou modifies tes overrides
+      - "registry.json"
+      - ".github/workshop/overrides.json"
+
+permissions:
+  contents: write
+
+# Jamais deux builds en même temps
+concurrency:
+  group: build-workshop
+  cancel-in-progress: false
+
+env:
+  DATA_BRANCH: workshop-data
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Les fichiers générés vivent sur une branche séparée, extraite dans publish/.
+      # La branche est créée automatiquement au premier passage.
+      - name: Prepare data branch
+        run: |
+          if git ls-remote --exit-code --heads origin "$DATA_BRANCH" > /dev/null; then
+            git fetch --depth=1 origin "$DATA_BRANCH"
+            git worktree add --detach publish FETCH_HEAD
+          else
+            git worktree add --detach publish
+            cd publish
+            git checkout --orphan "$DATA_BRANCH"
+            git rm -rf --quiet .
+          fi
+
+      - name: Build games.json
+        run: node .github/workshop/scripts/build-workshop.js
+
+      - name: Publish if something changed
+        working-directory: publish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "Workshop update $(date -u +%Y-%m-%d)"
+            git push origin "HEAD:$DATA_BRANCH"
+          fi
