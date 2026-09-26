@@ -7,9 +7,8 @@ const { loadGame, mapWithLimit } = require("./workshop-lib");
 // Chemins relatifs à la racine du repo (surchargeables par variables d'environnement)
 const REGISTRY_FILE = process.env.REGISTRY_FILE || "registry.json";
 const OVERRIDES_FILE = process.env.OVERRIDES_FILE || ".github/workshop/overrides.json";
-// Ces deux fichiers vivent sur la branche workshop-data, extraite dans publish/
-const STATE_FILE = process.env.STATE_FILE || "publish/state.json";   // hash, dates, dernière version valide
-const OUTPUT_FILE = process.env.OUTPUT_FILE || "publish/games.json"; // fichier public lu par le site
+const STATE_FILE = process.env.STATE_FILE || ".github/workshop/data/state.json";   // hash, dates, dernière version valide
+const OUTPUT_FILE = process.env.OUTPUT_FILE || ".github/workshop/data/games.json"; // fichier public lu par le site
 const CONCURRENCY = 5;
 
 function readJson(file, fallback) {
@@ -17,9 +16,9 @@ function readJson(file, fallback) {
     return JSON.parse(fs.readFileSync(file, "utf8"));
 }
 
-function writeJson(file, data, pretty) {
+function writeJson(file, data) {
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, JSON.stringify(data, null, pretty ? 2 : 0) + "\n");
+    fs.writeFileSync(file, JSON.stringify(data, null, 4) + "\n");
 }
 
 async function main() {
@@ -89,8 +88,8 @@ async function main() {
         });
     }
 
-    writeJson(STATE_FILE, newState, true);
-    writeJson(OUTPUT_FILE, games, false);
+    writeJson(STATE_FILE, newState);
+    writeJson(OUTPUT_FILE, games);
 
     // 3. Résumé
     const lines = [

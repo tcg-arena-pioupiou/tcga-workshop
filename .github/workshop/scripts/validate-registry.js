@@ -4,8 +4,7 @@ const fs = require("fs");
 const { loadGame, isNonEmptyString } = require("./workshop-lib");
 
 const BASE_REGISTRY_FILE = process.env.BASE_REGISTRY_FILE || "registry.json";
-// state.json vient de la branche workshop-data (copié par le workflow)
-const STATE_FILE = process.env.STATE_FILE || "publish/state.json";
+const STATE_FILE = process.env.STATE_FILE || ".github/workshop/data/state.json";
 const PR_REGISTRY_FILE = process.env.PR_REGISTRY_PATH;
 const COMMENT_FILE = process.env.COMMENT_FILE;
 
