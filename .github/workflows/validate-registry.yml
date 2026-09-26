@@ -12,9 +12,6 @@ permissions:
   contents: read
   pull-requests: write
 
-env:
-  DATA_BRANCH: workshop-data
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -41,16 +38,11 @@ jobs:
             echo "blocked=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Get registry.json from the PR and state.json from the data branch (as data only)
+      - name: Get registry.json from the PR (as data only)
         if: steps.files.outputs.blocked != 'true'
         run: |
           git fetch --no-tags --depth=1 origin "pull/${{ github.event.pull_request.number }}/head:pr-head"
           git show pr-head:registry.json > "$RUNNER_TEMP/pr-registry.json" || echo "" > "$RUNNER_TEMP/pr-registry.json"
-          if git fetch --no-tags --depth=1 origin "$DATA_BRANCH" 2> /dev/null; then
-            git show FETCH_HEAD:state.json > "$RUNNER_TEMP/state.json" || echo "{}" > "$RUNNER_TEMP/state.json"
-          else
-            echo "{}" > "$RUNNER_TEMP/state.json"
-          fi
 
       - uses: actions/setup-node@v4
         if: steps.files.outputs.blocked != 'true'
@@ -61,7 +53,6 @@ jobs:
         if: steps.files.outputs.blocked != 'true'
         env:
           PR_REGISTRY_PATH: ${{ runner.temp }}/pr-registry.json
-          STATE_FILE: ${{ runner.temp }}/state.json
           COMMENT_FILE: ${{ runner.temp }}/comment.md
         run: node .github/workshop/scripts/validate-registry.js
 
