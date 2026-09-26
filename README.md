@@ -1,4 +1,4 @@
-# TCG Arena Workshop 
+# TCG Arena Workshop
 
 Every game on the workshop is described by a small `workshop.json` file that **you host yourself**, next to your game (GitHub Pages works great). You keep full control: change your file whenever you want, the workshop picks up your changes once a day.
 
