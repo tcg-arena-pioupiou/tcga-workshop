@@ -37,15 +37,23 @@ async function main() {
         const url = reg.workshopUrl;
         const previous = previousState[url];
         try {
-            const { entry, hash } = await loadGame(url);
+            const { entry, hash, cards } = await loadGame(url, previous);
             const changed = !previous || previous.hash !== hash;
+            // notModified sert au rapport, inutile de le stocker
+            const storedCards = cards && { url: cards.url, hash: cards.hash, etag: cards.etag, lastModified: cards.lastModified };
             newState[url] = {
                 hash,
                 createdAt: previous?.createdAt ?? today,
                 lastUpdated: changed ? today : previous.lastUpdated,
+                ...(storedCards && { cards: storedCards }),
                 entry,
             };
-            report.push({ name: reg.name, status: !previous ? "🆕 new" : changed ? "🔄 updated" : "✅ unchanged" });
+            const cardsInfo = !cards ? "" : cards.notModified ? "cards: not re-downloaded (304)" : "cards: downloaded";
+            report.push({
+                name: reg.name,
+                status: !previous ? "🆕 new" : changed ? "🔄 updated" : "✅ unchanged",
+                error: cardsInfo,
+            });
         } catch (e) {
             // En cas d'erreur, on garde la dernière version valide connue
             if (previous) newState[url] = previous;

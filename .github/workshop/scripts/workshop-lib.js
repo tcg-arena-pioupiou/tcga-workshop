@@ -1,10 +1,13 @@
 // Fonctions partagées entre la vérification des PR et le build quotidien.
 const crypto = require("crypto");
+const zlib = require("zlib");
 
 // --- Réglages ---
 const LIMITS = {
     workshopBytes: 1_000_000,    // 1 Mo max pour un workshop.json
     gameBytes: 50_000_000,       // 50 Mo max pour le JSON du jeu
+    cardsBytes: 50_000_000,      // 50 Mo max téléchargés pour le fichier de cartes
+    cardsUnzippedBytes: 300_000_000, // 300 Mo max une fois décompressé
     timeoutMs: 20_000,           // 20 s max par téléchargement
 };
 const MAX_TAGS_LENGTH = 200;
@@ -13,14 +16,28 @@ const MAX_TAGS_LENGTH = 200;
 // Chemin avec des points si c'est imbriqué, ex: "game.name".
 const GAME_NAME_PATH = "name";
 const GAME_IMAGE_PATH = "menuBackgroundImage";
+// Fichier de cartes, pour savoir si le jeu a été mis à jour
+const CARDS_VERSION_PATH = "cards.version";
+const CARDS_DATA_URL_PATH = "cards.dataUrl";
 
 // --- Réseau ---
 
-async function fetchText(url, maxBytes) {
+// Téléchargement brut. Avec "conditional" ({ etag, lastModified } du passage précédent),
+// le serveur peut répondre 304 : rien n'est téléchargé et notModified vaut true.
+async function fetchResponse(url, maxBytes, conditional) {
+    const headers = {};
+    if (conditional?.etag) headers["If-None-Match"] = conditional.etag;
+    if (conditional?.lastModified) headers["If-Modified-Since"] = conditional.lastModified;
+
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), LIMITS.timeoutMs);
     try {
-        const res = await fetch(url, { signal: controller.signal, redirect: "follow" });
+        const res = await fetch(url, { signal: controller.signal, redirect: "follow", headers });
+        const cacheInfo = {
+            etag: res.headers.get("etag") || undefined,
+            lastModified: res.headers.get("last-modified") || undefined,
+        };
+        if (res.status === 304) return { notModified: true, ...cacheInfo };
         if (!res.ok) throw new Error(`HTTP ${res.status} on ${url}`);
 
         const declared = Number(res.headers.get("content-length"));
@@ -42,13 +59,23 @@ async function fetchText(url, maxBytes) {
             }
             chunks.push(value);
         }
-        return Buffer.concat(chunks).toString("utf8").replace(/^\uFEFF/, "");
+        return { notModified: false, bytes: Buffer.concat(chunks), ...cacheInfo };
     } catch (e) {
         if (e.name === "AbortError") throw new Error(`timeout on ${url}`);
         throw e;
     } finally {
         clearTimeout(timer);
     }
+}
+
+async function fetchBytes(url, maxBytes) {
+    const { bytes } = await fetchResponse(url, maxBytes);
+    return bytes;
+}
+
+async function fetchText(url, maxBytes) {
+    const bytes = await fetchBytes(url, maxBytes);
+    return bytes.toString("utf8").replace(/^\uFEFF/, "");
 }
 
 async function fetchJson(url, maxBytes) {
@@ -76,6 +103,70 @@ function stableStringify(value) {
 
 function hashOf(value) {
     return crypto.createHash("sha256").update(stableStringify(value)).digest("hex");
+}
+
+function hashBytes(bytes) {
+    return crypto.createHash("sha256").update(bytes).digest("hex");
+}
+
+// Un fichier .gz servi tel quel n'est pas décompressé par fetch : on le détecte
+// à sa signature (1f 8b), quelle que soit son extension.
+function maybeGunzip(bytes, url) {
+    if (bytes.length >= 2 && bytes[0] === 0x1f && bytes[1] === 0x8b) {
+        try {
+            return zlib.gunzipSync(bytes, { maxOutputLength: LIMITS.cardsUnzippedBytes });
+        } catch (e) {
+            throw new Error(`could not unzip ${url} (${e.message})`);
+        }
+    }
+    return bytes;
+}
+
+// Hash qui change quand le jeu lui-même change :
+// - game.json, toujours
+// - + le fichier de cartes, sauf si game.json indique une version des cartes
+//   (dans ce cas, changer la version change déjà le hash de game.json)
+//
+// previousCards : infos du passage précédent { url, hash, etag, lastModified }.
+// Si le fichier de cartes n'a pas changé, le serveur répond 304 et on réutilise
+// l'ancien hash sans rien télécharger.
+// Renvoie { hash, cards } où cards est à stocker pour le prochain passage.
+async function computeGameHash(gameJson, gameUrl, previousCards) {
+    const gameHash = hashOf(gameJson);
+
+    if (getPath(gameJson, CARDS_VERSION_PATH) !== undefined) return { hash: gameHash };
+
+    const rawDataUrl = getPath(gameJson, CARDS_DATA_URL_PATH);
+    if (!isNonEmptyString(rawDataUrl)) return { hash: gameHash };
+
+    const cardsUrl = resolveUrl(rawDataUrl, gameUrl, CARDS_DATA_URL_PATH);
+
+    // Requête conditionnelle seulement si on a un hash valable pour cette même URL
+    const canReuse = previousCards?.url === cardsUrl && previousCards?.hash;
+    const res = await fetchResponse(cardsUrl, LIMITS.cardsBytes, canReuse ? previousCards : undefined);
+
+    let cardsHash;
+    if (res.notModified && canReuse) {
+        cardsHash = previousCards.hash;
+    } else if (res.notModified) {
+        // 304 inattendu sans ancien hash : on retélécharge sans condition
+        const bytes = await fetchBytes(cardsUrl, LIMITS.cardsBytes);
+        cardsHash = hashBytes(maybeGunzip(bytes, cardsUrl));
+    } else {
+        cardsHash = hashBytes(maybeGunzip(res.bytes, cardsUrl));
+    }
+
+    return {
+        hash: hashBytes(Buffer.from(gameHash + cardsHash)),
+        cards: {
+            url: cardsUrl,
+            hash: cardsHash,
+            // Un 304 ne renvoie pas toujours ces en-têtes : on garde les anciens
+            etag: res.etag ?? (res.notModified ? previousCards?.etag : undefined),
+            lastModified: res.lastModified ?? (res.notModified ? previousCards?.lastModified : undefined),
+            notModified: !!res.notModified,
+        },
+    };
 }
 
 function getPath(obj, path) {
@@ -160,8 +251,9 @@ function validateWorkshop(ws) {
 }
 
 // --- Chargement complet d'un jeu à partir de son workshop.json ---
-// Renvoie { entry, hash } ou lève une erreur lisible.
-async function loadGame(workshopUrl) {
+// previousState (optionnel) : état du passage précédent, pour les requêtes conditionnelles.
+// Renvoie { entry, hash, cards } ou lève une erreur lisible.
+async function loadGame(workshopUrl, previousState) {
     const ws = await fetchJson(workshopUrl, LIMITS.workshopBytes);
 
     const errors = validateWorkshop(ws);
@@ -203,8 +295,9 @@ async function loadGame(workshopUrl) {
         updates: (ws.updates || []).map(normalizeText),
     };
 
-    // Seul le workshop.json compte pour la date de mise à jour
-    return { entry, hash: hashOf(ws) };
+    // La date de mise à jour suit le jeu (game.json + cartes), pas le workshop.json
+    const { hash, cards } = await computeGameHash(gameJson, gameUrl, previousState?.cards);
+    return { entry, hash, cards };
 }
 
 // Exécute fn sur chaque élément avec au plus `limit` appels en parallèle,
