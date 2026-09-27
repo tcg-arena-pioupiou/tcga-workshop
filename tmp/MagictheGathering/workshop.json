@@ -7,6 +7,8 @@
     ],
     "useAiArts": false,
     "screenshotUrls": [
-        "https://i.ibb.co/ZzKYNswJ/z-V2lc-ZW-Imgur.jpg"
-    ]
+        
+    ],
+    "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/description.md",
+    "updates": ["First release!"]
 }

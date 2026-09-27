@@ -9,7 +9,6 @@ Put it anywhere online, ideally in the same folder as your game file. Copy this 
 ```json
 {
     "author": "YourName",
-    "contact": { "discord": "your_discord_name" },
     "gameUrl": "Game.json",
     "tags": "tcg,fantasy",
     "langs": ["en"],
@@ -27,7 +26,6 @@ Put it anywhere online, ideally in the same folder as your game file. Copy this 
 | `tags` | no | Words people can search for, separated by commas (max 200 characters). |
 | `langs` | yes | Languages of your game, ex: `["en", "fr"]`. |
 | `useAiArts` | yes | `true` or `false` (no quotes). |
-| `contact.discord` | no | Your Discord name, so we can reach you if something breaks. |
 | `screenshotUrls` | no | Links or paths to screenshots. |
 | `descriptionUrl` | no | Link or path to a `.md` file with your description (you can use **bold**, lists, links…). |
 | `updates` | no | Your patch notes, **newest first**. One text per update. For several lines, use a list of lines: `["Big update:", "- New cards", "- Bug fixes"]`. You can edit old ones anytime. |

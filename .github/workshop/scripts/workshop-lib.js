@@ -228,13 +228,6 @@ function validateWorkshop(ws) {
             errors.push(`"tags" is too long (${ws.tags.length} characters, max ${MAX_TAGS_LENGTH})`);
         }
     }
-    if (ws.contact !== undefined) {
-        if (ws.contact === null || typeof ws.contact !== "object" || Array.isArray(ws.contact)) {
-            errors.push(`"contact" must be an object, ex: { "discord": "mypseudo" }`);
-        } else if (ws.contact.discord !== undefined && typeof ws.contact.discord !== "string") {
-            errors.push(`"contact.discord" must be a text`);
-        }
-    }
     if (ws.screenshotUrls !== undefined &&
         !(Array.isArray(ws.screenshotUrls) && ws.screenshotUrls.every(isNonEmptyString))) {
         errors.push(`"screenshotUrls" must be a list of links or paths`);
@@ -291,7 +284,6 @@ async function loadGame(workshopUrl, previousState) {
         useAiArts: ws.useAiArts,
         screenshotUrls,
         ...(descriptionUrl && { descriptionUrl }),
-        ...(ws.contact?.discord && { contact: { discord: ws.contact.discord.trim() } }),
         updates: (ws.updates || []).map(normalizeText),
     };
 
