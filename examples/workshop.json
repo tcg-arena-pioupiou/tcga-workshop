@@ -1,15 +1,17 @@
 {
     "author": "PiouPiou",
-    "contact": { "discord": "pioupiou" },
-    "gameUrl": "Game.json",
+    "gameUrl": "https://yourname.github.io/your-repo/Game.json",
     "tags": "tcg,fantasy,coop",
-    "langs": ["en", "fr"],
+    "langs": [
+        "en",
+        "fr"
+    ],
     "useAiArts": false,
     "screenshotUrls": [
-        "screenshots/1.png",
-        "screenshots/2.png"
+        "https://yourname.github.io/your-repo/screenshots/1.png",
+        "https://yourname.github.io/your-repo/screenshots/2.png"
     ],
-    "descriptionUrl": "description.md",
+    "descriptionUrl": "https://yourname.github.io/your-repo/description.md",
     "updates": [
         "Added the new expansion and fixed the resource counter.",
         [

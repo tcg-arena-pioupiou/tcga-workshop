@@ -139,7 +139,7 @@ async function computeGameHash(gameJson, gameUrl, previousCards) {
     const rawDataUrl = getPath(gameJson, CARDS_DATA_URL_PATH);
     if (!isNonEmptyString(rawDataUrl)) return { hash: gameHash };
 
-    const cardsUrl = resolveUrl(rawDataUrl, gameUrl, CARDS_DATA_URL_PATH);
+    const cardsUrl = requireUrl(rawDataUrl, CARDS_DATA_URL_PATH);
 
     // Requête conditionnelle seulement si on a un hash valable pour cette même URL
     const canReuse = previousCards?.url === cardsUrl && previousCards?.hash;
@@ -173,19 +173,20 @@ function getPath(obj, path) {
     return path.split(".").reduce((o, key) => (o == null ? undefined : o[key]), obj);
 }
 
-// Résout un chemin relatif par rapport à l'URL du fichier qui le contient
-function resolveUrl(value, baseUrl, field) {
+// Vérifie qu'une valeur est une URL complète (http ou https).
+// Les chemins relatifs ne sont pas acceptés : partout, on veut des URLs complètes.
+function requireUrl(value, field) {
     if (typeof value !== "string" || !value.trim()) {
-        throw new Error(`"${field}" must be a non-empty text`);
+        throw new Error(`"${field}" must be a non-empty link`);
     }
     let url;
     try {
-        url = new URL(value.trim(), baseUrl);
+        url = new URL(value.trim()); // sans base : un chemin relatif lève une erreur
     } catch {
-        throw new Error(`"${field}" is not a valid URL or path: ${value}`);
+        throw new Error(`"${field}" must be a full link starting with https:// (got: ${value})`);
     }
     if (url.protocol !== "https:" && url.protocol !== "http:") {
-        throw new Error(`"${field}" must be an http(s) URL: ${value}`);
+        throw new Error(`"${field}" must be a full link starting with https:// (got: ${value})`);
     }
     return url.href;
 }
@@ -230,10 +231,10 @@ function validateWorkshop(ws) {
     }
     if (ws.screenshotUrls !== undefined &&
         !(Array.isArray(ws.screenshotUrls) && ws.screenshotUrls.every(isNonEmptyString))) {
-        errors.push(`"screenshotUrls" must be a list of links or paths`);
+        errors.push(`"screenshotUrls" must be a list of full links (https://...)`);
     }
     if (ws.descriptionUrl !== undefined && !isNonEmptyString(ws.descriptionUrl)) {
-        errors.push(`"descriptionUrl" must be a link or path to a .md file`);
+        errors.push(`"descriptionUrl" must be a full link (https://...) to a .md file`);
     }
     if (ws.updates !== undefined &&
         !(Array.isArray(ws.updates) && ws.updates.every(isTextOrLines))) {
@@ -252,12 +253,12 @@ async function loadGame(workshopUrl, previousState) {
     const errors = validateWorkshop(ws);
     if (errors.length) throw new Error(errors.join(" · "));
 
-    // Chemins relatifs résolus par rapport au workshop.json
-    const gameUrl = resolveUrl(ws.gameUrl, workshopUrl, "gameUrl");
+    // Toutes les adresses doivent être des URLs complètes
+    const gameUrl = requireUrl(ws.gameUrl, "gameUrl");
     const screenshotUrls = (ws.screenshotUrls || [])
-        .map((u, i) => resolveUrl(u, workshopUrl, `screenshotUrls[${i}]`));
+        .map((u, i) => requireUrl(u, `screenshotUrls[${i}]`));
     const descriptionUrl = ws.descriptionUrl
-        ? resolveUrl(ws.descriptionUrl, workshopUrl, "descriptionUrl")
+        ? requireUrl(ws.descriptionUrl, "descriptionUrl")
         : undefined;
 
     // Nom et image viennent du JSON du jeu lui-même
@@ -270,8 +271,7 @@ async function loadGame(workshopUrl, previousState) {
     if (!isNonEmptyString(rawImage)) {
         throw new Error(`the game file has no "${GAME_IMAGE_PATH}" (${gameUrl})`);
     }
-    // L'image est relative au fichier du jeu, pas au workshop.json
-    const imageUrl = resolveUrl(rawImage, gameUrl, GAME_IMAGE_PATH);
+    const imageUrl = requireUrl(rawImage, GAME_IMAGE_PATH);
 
     const entry = {
         name: name.trim(),
