@@ -13,8 +13,9 @@
     ],
     "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/description.md",
     "updates": [
+        ["-line1","-line2"],
         "Now supports advanced mana autopay.",
-        "Added Treachry format for 5 players."
+        "Added Treachry format for 5 players.",
         "Added 2 Headed Giant and 2 Headed Giant - EDH formats."
     ]
 }
