@@ -18,7 +18,7 @@
         ],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 1000
+        "popularity": 1000000
     },
     {
         "name": "Lorcana",
@@ -38,7 +38,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-10-04",
-        "popularity": 959
+        "popularity": 42000
     },
     {
         "name": "Star wars unlimited",
@@ -57,7 +57,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 938
+        "popularity": 3938
     },
     {
         "name": "Riftbound",
@@ -77,7 +77,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-10-07",
-        "popularity": 897
+        "popularity": 2000000
     },
     {
         "name": "Cyberpunk TCG",
@@ -96,7 +96,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 876
+        "popularity": 2876
     },
     {
         "name": "Altered",
@@ -116,7 +116,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 855
+        "popularity": 2855
     },
     {
         "name": "Pokemon",
@@ -135,7 +135,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 814
+        "popularity": 10814
     },
     {
         "name": "Yu-Gi-Oh",
@@ -154,7 +154,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 793
+        "popularity": 5793
     },
     {
         "name": "Gundam Card Game",
@@ -173,7 +173,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-10-03",
-        "popularity": 772
+        "popularity": 4772
     },
     {
         "name": "Godzilla Card Game",
@@ -211,7 +211,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 710
+        "popularity": 32000
     },
     {
         "name": "Shadowverse Evolve",
@@ -230,7 +230,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-10-05",
-        "popularity": 689
+        "popularity": 37689
     },
     {
         "name": "CookieRun Braverse Dev",
@@ -249,7 +249,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 648
+        "popularity": 30000
     },
     {
         "name": "Etheron",
@@ -268,7 +268,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 627
+        "popularity": 1500
     },
     {
         "name": "Force of Will",
@@ -287,7 +287,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-10-06",
-        "popularity": 606
+        "popularity": 8000
     },
     {
         "name": "Dragon Ball Super Card Game Masters",
@@ -306,7 +306,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 565
+        "popularity": 5000
     },
     {
         "name": "Alpha Clash TCG",
@@ -325,7 +325,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 544
+        "popularity": 2544
     },
     {
         "name": "Speed Basketball TCG",
@@ -344,7 +344,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 523
+        "popularity": 23
     },
     {
         "name": "Azuki TCG",
@@ -363,7 +363,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 482
+        "popularity": 9482
     },
     {
         "name": "Cryptid Camp",
@@ -401,7 +401,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 440
+        "popularity": 2440
     },
     {
         "name": "Echoes of Astra",
@@ -439,7 +439,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 378
+        "popularity": 678
     },
     {
         "name": "Vampire The Eternal Struggle",
@@ -477,7 +477,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 316
+        "popularity": 1316
     },
     {
         "name": "Digimon TCG",
@@ -496,7 +496,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 295
+        "popularity": 700
     },
     {
         "name": "Rift Runners TCG",
@@ -515,7 +515,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 254
+        "popularity": 74
     },
     {
         "name": "Cataclysm Arcade",
@@ -534,7 +534,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 233
+        "popularity": 333
     },
     {
         "name": "Vibes",
@@ -572,7 +572,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 171
+        "popularity": 200
     },
     {
         "name": "BattleTech Trading Card Game",
@@ -591,7 +591,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 150
+        "popularity": 250
     },
     {
         "name": "Naruto TCG",
@@ -610,7 +610,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 129
+        "popularity": 229
     },
     {
         "name": "Marvel Champions",
@@ -629,7 +629,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 88
+        "popularity": 488
     },
     {
         "name": "Classic",
@@ -648,7 +648,7 @@
         "updates": [],
         "createdAt": "2026-09-26",
         "lastUpdated": "2026-09-27",
-        "popularity": 67
+        "popularity": 467
     },
     {
         "name": "Union Arena",
