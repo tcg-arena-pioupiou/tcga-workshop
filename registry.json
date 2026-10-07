@@ -134,5 +134,9 @@
     {
         "name": "Classic",
         "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Classic/workshop.json"
+    },
+    {
+        "name": "Union Arena",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-UnionArena/workshop/workshop.json"
     }
 ]
