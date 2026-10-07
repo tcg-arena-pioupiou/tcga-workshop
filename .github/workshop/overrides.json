@@ -1,104 +1,104 @@
 {
     "Magic the Gathering": {
-        "popularity": 1000
+        "popularity": 1000000
     },
     "Lorcana": {
-        "popularity": 959
+        "popularity": 42000
     },
     "Star Wars Unlimited": {
-        "popularity": 938
+        "popularity": 3938
     },
     "Riftbound": {
-        "popularity": 897
+        "popularity": 2000000
     },
     "Cyberpunk TCG": {
-        "popularity": 876
+        "popularity": 2876
     },
     "Altered": {
-        "popularity": 855
+        "popularity": 2855
     },
     "Pokemon": {
-        "popularity": 814
+        "popularity": 10814
     },
     "Yu-Gi-Oh": {
-        "popularity": 793
+        "popularity": 5793
     },
     "Gundam Card Game": {
-        "popularity": 772
+        "popularity": 4772
     },
     "Godzilla Card Game": {
         "popularity": 731
     },
     "Dragon Ball Super Fusion World": {
-        "popularity": 710
+        "popularity": 32000
     },
     "Shadowverse Evolve": {
-        "popularity": 689
+        "popularity": 37689
     },
     "CookieRun Braverse": {
-        "popularity": 648
+        "popularity": 30000
     },
     "Etheron": {
-        "popularity": 627
+        "popularity": 1500
     },
     "Force of Will": {
-        "popularity": 606
+        "popularity": 8000
     },
     "Dragon Ball Super Card Game Masters": {
-        "popularity": 565
+        "popularity": 5000
     },
     "Alpha Clash TCG": {
-        "popularity": 544
+        "popularity": 2544
     },
     "Speed Basketball TCG": {
-        "popularity": 523
+        "popularity": 23
     },
     "Azuki TCG": {
-        "popularity": 482
+        "popularity": 9482
     },
     "Cryptid Camp": {
         "popularity": 461
     },
     "Palworld OCG": {
-        "popularity": 440
+        "popularity": 2440
     },
     "Echoes of Astra": {
         "popularity": 399
     },
     "Escape Land CCG": {
-        "popularity": 378
+        "popularity": 678
     },
     "Vampire The Eternal Struggle": {
         "popularity": 337
     },
     "My Little Pony": {
-        "popularity": 316
+        "popularity": 1316
     },
     "Digimon": {
-        "popularity": 295
+        "popularity": 700
     },
     "Rift Runners TCG": {
-        "popularity": 254
+        "popularity": 74
     },
     "Cataclysm Arcade": {
-        "popularity": 233
+        "popularity": 333
     },
     "Vibes": {
         "popularity": 212
     },
     "Hellbreak": {
-        "popularity": 171
+        "popularity": 200
     },
     "Battletech": {
-        "popularity": 150
+        "popularity": 250
     },
     "Naruto TCG": {
-        "popularity": 129
+        "popularity": 229
     },
     "Marvel Champions": {
-        "popularity": 88
+        "popularity": 488
     },
     "Classic": {
-        "popularity": 67
+        "popularity": 467
     }
 }
