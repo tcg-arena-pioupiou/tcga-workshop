@@ -5,8 +5,10 @@
         "en",
         "fr"
     ],
+    "tags": "mtg,ffa,2v2,treachery,fblthp",
     "useAiArts": false,
     "screenshotUrls": [
+        "https://valcur.github.io/TCG-Arena-MTG/Images/banner.jpg",
         "https://valcur.github.io/TCG-Arena-MTG/Images/howToBecomeRich.gif"
     ],
     "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/description.md",
