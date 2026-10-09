@@ -5,19 +5,25 @@
         "workshopUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/workshop.json",
         "gameUrl": "https://valcur.github.io/TCG-Arena-MTG/Game_MTG.json",
         "imageUrl": "https://i.ibb.co/ZzKYNswJ/z-V2lc-ZW-Imgur.jpg",
-        "tags": "",
+        "tags": "mtg,ffa,2v2,treachery,fblthp",
         "langs": [
             "en",
             "fr"
         ],
         "useAiArts": false,
-        "screenshotUrls": [],
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-MTG/Images/banner.jpg",
+            "https://valcur.github.io/TCG-Arena-MTG/Images/howToBecomeRich.gif"
+        ],
         "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MagictheGathering/description.md",
         "updates": [
-            "First release!"
+            "- line1\n- line2",
+            "Now supports advanced mana autopay.",
+            "Added Treachry format for 5 players.",
+            "Added 2 Headed Giant and 2 Headed Giant - EDH formats."
         ],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-09-27",
+        "lastUpdated": "2026-10-07",
         "popularity": 1000000
     },
     {
@@ -76,7 +82,7 @@
         ],
         "updates": [],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-10-07",
+        "lastUpdated": "2026-10-09",
         "popularity": 2000000
     },
     {
