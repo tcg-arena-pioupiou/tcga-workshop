@@ -1,10 +1,10 @@
 [
     {
         "name": "Magic the Gathering",
-        "text": "Magic The Gathering is a strategy card game created by Richard Garfield in 1993, and published by Wizards of the Coast."
+        "text": "Magic: The Gathering is a TCG known for its deep gameplay, unique color-based mana system, and vast variety of cards that allow players to build highly customizable decks and create complex interactions."
     },
     {
         "name": "Riftbound",
-        "text": "The new TCG set in the League of Legends universe, already playable online with the latest cards."
+        "text": "The new TCG set in the League of Legends universe combines Legend choice with unique playstyles, and battles over multiple battlefields."
     }
 ]
