@@ -5,7 +5,11 @@
         "en"
     ],
     "useAiArts": false,
+    "updates": [
+        "Now using data from PonyRec.net for weekly cards update."
+    ],
+    "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MyLittlePony/description.md",
     "screenshotUrls": [
-        "https://cdn.imgchest.com/files/07b61a92ea49.jpg"
+        "https://valcur.github.io/TCG-Arena-MLP/images/workshop1.jpg"
     ]
 }
