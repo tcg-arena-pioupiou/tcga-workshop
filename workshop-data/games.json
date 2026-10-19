@@ -728,5 +728,27 @@
         "createdAt": "2026-10-14",
         "lastUpdated": "2026-10-19",
         "popularity": 0
+    },
+    {
+        "name": "Elemental Creatures",
+        "author": "Justin Hartsock",
+        "workshopUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/workshop.json",
+        "gameUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/gamefile.json",
+        "imageUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/images/main_image.webp",
+        "tags": "tcg,fantasy,element,simple",
+        "langs": [
+            "en"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/images/main_image.webp"
+        ],
+        "descriptionUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/readme.md",
+        "updates": [
+            "Initial Release for Alpha Evolved Set"
+        ],
+        "createdAt": "2026-10-19",
+        "lastUpdated": "2026-10-19",
+        "popularity": 0
     }
 ]
