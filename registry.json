@@ -146,5 +146,9 @@
     {
         "name": "Seven Galaxies: The Card Game",
         "workshopUrl": "https://jjcodes78.github.io/SevenGalaxiesTCG/workshop.json"
+    },
+    {
+        "name": "Elemental Creatures",
+        "workshopUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/workshop.json"
     }
 ]
