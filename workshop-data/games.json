@@ -181,7 +181,7 @@
             "- Added ST11, ST12, ST13 and ST14 cards and Starter Decks."
         ],
         "createdAt": "2026-10-14",
-        "lastUpdated": "2026-10-14",
+        "lastUpdated": "2026-10-20",
         "popularity": 4772
     },
     {
@@ -487,11 +487,14 @@
         ],
         "useAiArts": false,
         "screenshotUrls": [
-            "https://cdn.imgchest.com/files/07b61a92ea49.jpg"
+            "https://valcur.github.io/TCG-Arena-MLP/images/workshop1.jpg"
         ],
-        "updates": [],
+        "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/MyLittlePony/description.md",
+        "updates": [
+            "Now using data from PonyRec.net for weekly cards update."
+        ],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-09-27",
+        "lastUpdated": "2026-10-20",
         "popularity": 1316
     },
     {
@@ -726,7 +729,7 @@
             "- Added all available sets."
         ],
         "createdAt": "2026-10-14",
-        "lastUpdated": "2026-10-19",
+        "lastUpdated": "2026-10-20",
         "popularity": 0
     },
     {
@@ -745,10 +748,11 @@
         ],
         "descriptionUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/readme.md",
         "updates": [
-            "Initial Release for Alpha Evolved Set"
+            "1.1.0 New playmat and Starter Decks",
+            "1.0.0 Initial Release for Alpha Evolved Set"
         ],
         "createdAt": "2026-10-19",
-        "lastUpdated": "2026-10-19",
+        "lastUpdated": "2026-10-20",
         "popularity": 0
     }
 ]
