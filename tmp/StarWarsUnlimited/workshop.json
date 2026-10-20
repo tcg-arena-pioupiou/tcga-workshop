@@ -1,11 +1,15 @@
 {
-    "author": "PiouPiou",
-    "gameUrl": "https://valcur.github.io/TCG-Arena-SWU/Game_SWU.json",
-    "langs": [
-        "en"
-    ],
-    "useAiArts": false,
-    "screenshotUrls": [
-        "https://i.ibb.co/JWTpk3P7/FMrb-NER-Imgur.jpg"
-    ]
+  "author": "PiouPiou",
+  "gameUrl": "https://valcur.github.io/TCG-Arena-SWU/game.json",
+  "langs": [
+    "en"
+  ],
+  "useAiArts": false,
+  "updates": [
+    "Now using data from swu-db.com for weekly cards update."
+  ],
+  "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/StarWarsUnlimited/description.md",
+  "screenshotUrls": [
+    "https://valcur.github.io/TCG-Arena-SWU/Images/workshop1.jpg"
+  ]
 }
