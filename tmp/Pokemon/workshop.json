@@ -5,7 +5,11 @@
         "en"
     ],
     "useAiArts": false,
+    "updates": [
+        "Now using data from TCGdex for weekly cards update."
+    ],
+    "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Pokemon/description.md",
     "screenshotUrls": [
-        "https://valcur.github.io/TCG-Arena-Pokemon/Images/1.jpg"
+        "https://valcur.github.io/TCG-Arena-Pokemon/Images/workshop1.jpg"
     ]
 }
