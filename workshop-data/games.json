@@ -57,11 +57,14 @@
         ],
         "useAiArts": false,
         "screenshotUrls": [
-            "https://i.ibb.co/JWTpk3P7/FMrb-NER-Imgur.jpg"
+            "https://valcur.github.io/TCG-Arena-SWU/Images/workshop1.jpg"
         ],
-        "updates": [],
+        "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/StarWarsUnlimited/description.md",
+        "updates": [
+            "Now using data from swu-db.com for weekly cards update."
+        ],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-09-27",
+        "lastUpdated": "2026-10-21",
         "popularity": 3938
     },
     {
@@ -135,11 +138,14 @@
         ],
         "useAiArts": false,
         "screenshotUrls": [
-            "https://valcur.github.io/TCG-Arena-Pokemon/Images/1.jpg"
+            "https://valcur.github.io/TCG-Arena-Pokemon/Images/workshop1.jpg"
         ],
-        "updates": [],
+        "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Pokemon/description.md",
+        "updates": [
+            "Now using data from TCGdex for weekly cards update."
+        ],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-09-27",
+        "lastUpdated": "2026-10-21",
         "popularity": 10814
     },
     {
