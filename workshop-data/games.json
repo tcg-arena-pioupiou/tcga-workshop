@@ -760,5 +760,27 @@
         "createdAt": "2026-10-19",
         "lastUpdated": "2026-10-20",
         "popularity": 0
+    },
+    {
+        "name": "One Piece",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-OnePiece/workshop/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-OnePiece/game.json",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-OnePiece/Images/banner.jpg",
+        "tags": "",
+        "langs": [
+            "en"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-OnePiece/workshop/workshop1.jpg"
+        ],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-OnePiece/workshop/description.md",
+        "updates": [
+            "First release!"
+        ],
+        "createdAt": "2026-10-26",
+        "lastUpdated": "2026-10-26",
+        "popularity": 0
     }
 ]
