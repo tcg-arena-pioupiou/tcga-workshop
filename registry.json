@@ -150,5 +150,9 @@
     {
         "name": "Elemental Creatures",
         "workshopUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/workshop.json"
+    },
+    {
+        "name": "One Piece",
+        "workshopUrl": ""https://valcur.github.io/TCG-Arena-OnePiece/workshop/workshop.json"
     }
 ]
