@@ -250,7 +250,7 @@
         ],
         "updates": [],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-10-11",
+        "lastUpdated": "2026-11-07",
         "popularity": 37689
     },
     {
@@ -754,11 +754,12 @@
         ],
         "descriptionUrl": "https://raw.githubusercontent.com/kaedenreese/TCG-Arena-EC/refs/heads/main/readme.md",
         "updates": [
+            "1.2.0 Added frontline power counter and changed layout",
             "1.1.0 New playmat and Starter Decks",
             "1.0.0 Initial Release for Alpha Evolved Set"
         ],
         "createdAt": "2026-10-19",
-        "lastUpdated": "2026-10-28",
+        "lastUpdated": "2026-11-07",
         "popularity": 0
     },
     {
