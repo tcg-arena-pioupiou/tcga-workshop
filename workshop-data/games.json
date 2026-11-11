@@ -784,5 +784,27 @@
         "createdAt": "2026-10-26",
         "lastUpdated": "2026-11-09",
         "popularity": 0
+    },
+    {
+        "name": "Universus",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Universus/Workshop/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-Universus/game.json",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-Universus/Images/banner.jpeg",
+        "tags": "",
+        "langs": [
+            "en"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-Universus/Workshop/screenshot1.jpg"
+        ],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-Universus/Workshop/description.md",
+        "updates": [
+            "First release!"
+        ],
+        "createdAt": "2026-11-11",
+        "lastUpdated": "2026-11-11",
+        "popularity": 0
     }
 ]
