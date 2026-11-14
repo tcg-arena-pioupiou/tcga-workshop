@@ -158,5 +158,9 @@
     {
         "name": "Universus",
         "workshopUrl": "https://valcur.github.io/TCG-Arena-Universus/Workshop/workshop.json"
+    },
+    {
+        "name": "Adventure Time",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-AdventureTime/Workshop/workshop.json"
     }
 ]
