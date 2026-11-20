@@ -145,7 +145,7 @@
             "Now using data from TCGdex for weekly cards update."
         ],
         "createdAt": "2026-09-26",
-        "lastUpdated": "2026-11-16",
+        "lastUpdated": "2026-11-20",
         "popularity": 10814
     },
     {
@@ -827,6 +827,31 @@
         ],
         "createdAt": "2026-11-14",
         "lastUpdated": "2026-11-14",
+        "popularity": 0
+    },
+    {
+        "name": "Rise",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Rise/Workshop/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-Rise/game.json",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-Rise/Images/banner.webp",
+        "tags": "",
+        "langs": [
+            "en",
+            "en",
+            "de",
+            "es"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-Rise/Workshop/workshop1.jpeg"
+        ],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-Rise/Workshop/description.md",
+        "updates": [
+            "First release!"
+        ],
+        "createdAt": "2026-11-20",
+        "lastUpdated": "2026-11-20",
         "popularity": 0
     }
 ]
