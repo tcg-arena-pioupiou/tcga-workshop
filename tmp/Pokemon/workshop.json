@@ -6,6 +6,7 @@
     ],
     "useAiArts": false,
     "updates": [
+        "Added an Evolve area to quickly evolve a Pokemon: place your base on the left and your evolution on the right to automatically move all cards.",
         "Now using data from TCGdex for weekly cards update."
     ],
     "descriptionUrl": "https://tcg-arena-pioupiou.github.io/tcga-workshop/tmp/Pokemon/description.md",
