@@ -162,5 +162,9 @@
     {
         "name": "Adventure Time",
         "workshopUrl": "https://valcur.github.io/TCG-Arena-AdventureTime/Workshop/workshop.json"
+    },
+    {
+        "name": "Rise",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Rise/Workshop/workshop.json"
     }
 ]
