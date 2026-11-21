@@ -839,7 +839,7 @@
         "tags": "",
         "langs": [
             "en",
-            "en",
+            "fr",
             "de",
             "es"
         ],
@@ -852,7 +852,30 @@
             "First release!"
         ],
         "createdAt": "2026-11-20",
-        "lastUpdated": "2026-11-20",
+        "lastUpdated": "2026-11-21",
+        "popularity": 0
+    },
+    {
+        "name": "Neverrift",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-Neverrift/game.json",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Images/banner.webp",
+        "tags": "",
+        "langs": [
+            "en",
+            "de"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/workshop1.jpg"
+        ],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/description.md",
+        "updates": [
+            "First release!"
+        ],
+        "createdAt": "2026-11-21",
+        "lastUpdated": "2026-11-21",
         "popularity": 0
     }
 ]
