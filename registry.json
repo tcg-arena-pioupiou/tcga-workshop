@@ -166,5 +166,9 @@
     {
         "name": "Rise",
         "workshopUrl": "https://valcur.github.io/TCG-Arena-Rise/Workshop/workshop.json"
+    },
+    {
+        "name": "Neverrift",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/workshop.json"
     }
 ]
