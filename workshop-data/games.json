@@ -877,5 +877,25 @@
         "createdAt": "2026-11-21",
         "lastUpdated": "2026-11-23",
         "popularity": 0
+    },
+    {
+        "name": "The Journey TCG",
+        "author": "PiouPiou",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Journey/Workshop/workshop.json",
+        "gameUrl": "https://valcur.github.io/TCG-Arena-Journey/game.json",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-Journey/Images/banner.jpg",
+        "tags": "",
+        "langs": [
+            "en"
+        ],
+        "useAiArts": false,
+        "screenshotUrls": [],
+        "descriptionUrl": "https://valcur.github.io/TCG-Arena-Journey/Workshop/description.md",
+        "updates": [
+            "First release!"
+        ],
+        "createdAt": "2026-11-27",
+        "lastUpdated": "2026-11-27",
+        "popularity": 0
     }
 ]
