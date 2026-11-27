@@ -883,13 +883,15 @@
         "author": "PiouPiou",
         "workshopUrl": "https://valcur.github.io/TCG-Arena-Journey/Workshop/workshop.json",
         "gameUrl": "https://valcur.github.io/TCG-Arena-Journey/game.json",
-        "imageUrl": "https://valcur.github.io/TCG-Arena-Journey/Images/banner.png",
-        "tags": "",
+        "imageUrl": "https://valcur.github.io/TCG-Arena-Journey/Images/banner.jpg",
+        "tags": "pixel,retro,rpg,party,fantasy",
         "langs": [
             "en"
         ],
         "useAiArts": false,
-        "screenshotUrls": [],
+        "screenshotUrls": [
+            "https://valcur.github.io/TCG-Arena-Journey/Workshop/workshop1.jpg"
+        ],
         "descriptionUrl": "https://valcur.github.io/TCG-Arena-Journey/Workshop/description.md",
         "updates": [
             "First release!"
