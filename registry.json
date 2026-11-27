@@ -170,5 +170,9 @@
     {
         "name": "Neverrift",
         "workshopUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/workshop.json"
+    },
+    {
+        "name": "The Journey TCG",
+        "workshopUrl": "https://valcur.github.io/TCG-Arena-Journey/Workshop/workshop.json"
     }
 ]
